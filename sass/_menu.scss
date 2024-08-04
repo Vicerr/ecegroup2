@@ -1,0 +1,42 @@
+.menu {
+    &-section {
+        margin-bottom: 2rem;
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .header * {
+            margin-block: 1.5rem;
+        }
+
+        .details {
+            padding: .5em;
+
+            h4 {
+                margin-block: .25em .5em;
+            }
+        }
+    }
+
+    &-img-container {
+        height: 180px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-description {
+        font-size: 14px;
+    }
+
+
+}
+
+.welcome_img.menu {
+    max-height: 300px;
+}
