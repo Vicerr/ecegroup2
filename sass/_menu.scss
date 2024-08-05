@@ -6,6 +6,10 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
+
+            @media screen and (max-width: 468px) {
+                gap: 2rem;
+            }
         }
 
         .header * {

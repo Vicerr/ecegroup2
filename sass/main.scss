@@ -1,5 +1,6 @@
 @import 'menu';
 @import 'blog';
+@import 'nav';
 $orange-color: #ffa62f;
 
 html {
@@ -22,6 +23,7 @@ body {
     margin-inline: auto !important;
     background-color: #fdfdfd;
     line-height: 1.5;
+    overflow-x: hidden;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -127,7 +129,6 @@ body {
 
 .welcome_img>div {
 
-    /* font-size: clamp(32px, 4.2vw + 0.2rem, 48px); */
     * {
         color: #fdfdfd;
     }
@@ -135,19 +136,20 @@ body {
     width: fit-content;
     font-weight: 600;
     position: absolute;
+    // padding-inline: 1rem;
     bottom: 30%;
     left: 6%;
     transform: translate(-4%, 30%);
 }
 
-.welcome_img p {
-    font-size: clamp(14px, 4.2vw + 0.2rem, 18px);
-    width: 42ch;
+
+.welcome_img .hero-title:first-child {
+    font-size: clamp(24px, 2vw + 1.2rem, 48px);
 }
 
-.welcome_img .hero-title {
-    font-size: clamp(18px, 4.2vw + 0.2rem, 42px);
-    width: fit-content;
+.welcome_img p.hero-title {
+    font-size: clamp(14px, 1vw + 0.5rem, 18px);
+    width: 32ch;
 }
 
 /* Responsive styles */
@@ -317,7 +319,7 @@ body {
 
 .split-content div:has(img) {
     max-height: 400px;
-    aspect-ratio: 3/4;
+    aspect-ratio: 5/4;
     overflow: hidden;
     border-radius: 4px;
 }
@@ -436,6 +438,7 @@ img {
     width: 30px;
     height: 30px;
     color: white;
+    text-decoration: none;
 }
 
 .follow_links a:hover {
@@ -586,7 +589,7 @@ p {
 .testimonial-cards {
     margin-block: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(50%, 380px), 1fr));
     gap: 1rem;
 
     .card {
@@ -631,6 +634,9 @@ p {
     margin-bottom: 4rem;
 
     .hero-header {
+        text-align: center;
+        color: #333;
+        margin-top: 1rem;
         font-size: 32px;
     }
 }
@@ -689,6 +695,7 @@ p {
 
 .gallery {
     text-align: center;
+    margin-bottom: 2rem;
 
     &-img-container {
         display: grid;
@@ -715,4 +722,8 @@ p {
             }
         }
     }
+}
+
+p {
+    color: #555;
 }
